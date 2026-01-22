@@ -2,10 +2,19 @@
 % Please edit documentation in R/load_showtext.R
 \name{check_font_families}
 \alias{check_font_families}
-\title{Import showtext to make use of DoE fonts}
+\title{Activate \code{showtext} and check for presence of Public Sans font family}
 \usage{
 check_font_families()
 }
+\value{
+\code{check_font_families()} does not have a return value and is called
+for its side effects.
+}
 \description{
-Import showtext to make use of DoE fonts
+\code{\link[=theme_doe]{theme_doe()}} uses \code{showtext} to allow R graphics devices to render the
+Public Sans font family. Use \code{check_font_families()} to check that Public
+Sans is available and to activate \code{showtext}.
+}
+\seealso{
+\code{\link[showtext:showtext_auto]{showtext::showtext_auto()}} and \href{https://digitalnsw.github.io/public-sans/}{Public Sans}.
 }

@@ -28,7 +28,7 @@ library(stringr)
 
 ## Examples
 
-`doestyle` includes an example dataset: `public_schools`, the NSW Public Schools Master dataset.
+`doestyle` includes an example dataset: [public_schools], the NSW Public Schools Master dataset.
 
 ```{r data-setup, warning = FALSE}
 head(public_schools)
@@ -41,7 +41,7 @@ public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
-  theme_doe() +
+  theme_doe(base_family = "sans") +
   labs(y = "Schools", x = "") +
   scale_fill_doe()
 ```
@@ -53,7 +53,8 @@ public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
-  theme_doe(axis.text.x = element_text(color = 'blue', 
+  theme_doe(base_family = "sans",
+            axis.text.x = element_text(color = 'blue', 
                                        angle = 15, # add angle to x-axis labels
                                        hjust = 0.75,
                                        vjust = 1), 
