@@ -4,17 +4,25 @@
 \name{doestyle-package}
 \alias{doestyle}
 \alias{doestyle-package}
-\title{doestyle: Apply Department of Education branding to figures and tables}
+\title{doestyle: NSW Department of Education branding for figures and tables}
 \description{
 doestyle is an R package containing functions to help produce brand-compliant figures for NSW Department of Education publications.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://nsw-education.github.io/doestyle/}
+  \item Report bugs at \url{https://github.com/nsw-education/doestyle/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Samuel Gardiner \email{samuel.gardiner7@det.nsw.edu.au} (\href{https://orcid.org/0000-0002-6752-6969}{ORCID})
 
 Authors:
 \itemize{
-  \item Matthew Finkbeiner \email{matthew.finkbeiner@det.nsw.edu.au}
-  \item Jonathan McGuire \email{jonathan.mcguire1@det.nsw.edu.au}
+  \item Matthew Finkbeiner (\href{https://orcid.org/0000-0003-0373-8150}{ORCID})
+  \item Jonathan McGuire
 }
 
 }
