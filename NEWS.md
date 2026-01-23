@@ -1,4 +1,4 @@
-# doestyle (development version)
+# doestyle 0.3.0
 
 ## Added
 
