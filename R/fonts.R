@@ -44,3 +44,50 @@ check_font_families <- function() {
     showtext::showtext.auto()
   }
 }
+
+
+#' Is Public Sans available?
+#'
+#' Test whether the Public Sans font family is available by searching the
+#' system, user and local font registries.
+#'
+#' @returns `TRUE` if Public Sans available; otherwise `FALSE`.
+#' @export
+public_sans_available <- function() {
+  systemfonts::font_info("Public Sans")$family == "Public Sans"
+}
+
+#' Register Public Sans in the local font registry
+#'
+#' Register `doestyle`'s embedded copy of the Public Sans font family for use.
+#' This doesn't install the font, but does make it available within this R
+#' session.
+#'
+#' @returns `register_public_sans()` does not have a return value and is called
+#'   for its side effects.
+#' @export
+register_public_sans <- function() {
+  ps <- system.file("fonts/public_sans", package = "doestyle")
+  systemfonts::register_font(
+    "Public Sans",
+    plain = paste0(ps, "/PublicSans-Regular.otf"),
+    bold = paste0(ps, "/PublicSans-Bold.otf"),
+    italic = paste0(ps, "/PublicSans-Italic.otf"),
+    bolditalic = paste0(ps, "/PublicSans-BoldItalic.otf")
+  )
+}
+
+#' Ensure Public Sans is available for use
+#'
+#' Checks that the Public Sans font family is available for use. If it isn't
+#' installed in the system or user font registries, registers `doestyle`'s
+#' embedded copy in the local font registry.
+#'
+#' @returns `require_public_sans()` does not have a return value and is called
+#'   for its side effects.
+#' @export
+require_public_sans <- function() {
+  if (!public_sans_available()) {
+    register_public_sans()
+  }
+}

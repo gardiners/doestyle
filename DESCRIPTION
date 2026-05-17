@@ -20,8 +20,10 @@ Imports:
     palettes,
     officer,
     purrr,
+    ragg,
     showtext,
-    sysfonts
+    sysfonts,
+    svglite
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
